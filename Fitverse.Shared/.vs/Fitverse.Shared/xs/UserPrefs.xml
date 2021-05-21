@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{4D775B8D-76CD-421C-9FF3-6922C38D54EC}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Helpers/PeriodType.cs">
+    <Files>
+      <File FileName="Helpers/PeriodType.cs" Line="10" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Fitverse.Shared" expanded="True">
+            <Node name="Fitverse.Shared" expanded="True">
+              <Node name="Helpers" expanded="True">
+                <Node name="PeriodType.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Fitverse.Shared PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

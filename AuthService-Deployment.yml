@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: authservice-deployment
+  labels:
+    app: authservice
+    name: authservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:                          
+      app: authservice
+
+ #-------------------------------> RollingUpdate definition
+  strategy:
+    type: RollingUpdate 
+    rollingUpdate:
+      maxUnavailable: 25%
+      maxSurge: 50%
+
+#-------------------------------> Blueprint for Pod
+  template:
+    metadata:
+      labels:
+        app: authservice
+    spec:
+      containers:
+      - name: authservice
+        image: crfitverse.azurecr.io/authservice:$(Build.BuildId)
+        ports:
+        - containerPort: 5009
+        - name: health-port
+          containerPort: 80
+        resources:
+          requests:
+            cpu: "25m"
+            memory: "32Mi"
+          limits:
+            cpu: "50m"
+            memory: "64Mi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: auth-service
+spec:
+  selector:
+    app: authservice
+  ports:
+    - protocol: TCP
+      port: 89
+      targetPort: 5009
+
